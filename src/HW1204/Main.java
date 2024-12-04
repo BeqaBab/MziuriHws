@@ -18,11 +18,14 @@ public class Main {
 
 
         System.out.println("Input your string: ");
-        String s1 = new String(scanner.next());
+        String s1 = new String(scanner.nextLine());
         int cnt1=0;
-        for(int i=0; i<s1.length(); i++){
-            if(s1.charAt(i) == '!' || s1.charAt(i) == '?' || s1.charAt(i) == ';' || s1.charAt(i) == '.'){
-                cnt1++;
+        if(s1.length()!=0){
+            for(int i=1; i<s1.length(); i++){
+                if(s1.charAt(i) == '!' || s1.charAt(i) == '?' || s1.charAt(i) == ';' || s1.charAt(i) == '.'){
+                    if(s1.charAt(i-1) != '?' && s1.charAt(i-1) != '!' && s1.charAt(i-1) != ';' && s1.charAt(i-1) != '.')
+                        cnt1++;
+                }
             }
         }
         System.out.println("The amount of sentences is " + cnt1);
@@ -81,7 +84,7 @@ public class Main {
         }   else {
             System.out.println("This word is huge and its abbreviation would be:");
             System.out.print(s4.charAt(0));
-            System.out.print(s4.length());
+            System.out.print(s4.length()-2);
             System.out.println(s4.charAt(s4.length()-1));
         }
 
