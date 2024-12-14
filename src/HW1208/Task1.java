@@ -17,6 +17,7 @@ public class Task1 {
             for(int i=0; i<n; i++){
                 sum+=arr[i];
             }
+            System.out.println(sum);
         } catch (IndexOutOfBoundsException e) {
             System.out.println("ინდექსი, რომელსაც თქვენ მიმართავთ, არ აქვს მასივს.");
         }

@@ -11,6 +11,6 @@ public class Task4 {
         if(scanner.nextInt()==1){
             User user = new User();
             user.Register();
-        }   else System.out.println("კარგით :(");
+        }   else System.out.println("კარგით.");
     }
 }
