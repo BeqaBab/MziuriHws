@@ -2,7 +2,7 @@ package HW1208;
 import java.util.Scanner;
 
 public class Task2 {
-    public static void main(String args[]){
+    public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Input the amount of members in the first array and them:");
         int[] arr1 = new int[scanner.nextInt()];
@@ -20,7 +20,7 @@ public class Task2 {
         try{
             System.out.println(arr1[a]/arr2[b]);
         }catch (ArithmeticException e){
-            System.out.println("ნულზე გაყოფა.");
+            System.out.println("ნულზე გაყოფა არ შეიძლება.");
         }
     }
 }

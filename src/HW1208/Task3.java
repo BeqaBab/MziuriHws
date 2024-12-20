@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Task3 {
-    public static void main(String args[]) throws IOException {
+    public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(System.in);
         try {
             System.out.println("Input the name of your file: ");
