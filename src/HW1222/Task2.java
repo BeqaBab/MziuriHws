@@ -9,7 +9,7 @@ public class Task2 {
         FileInputStream fileInputStream = new FileInputStream("C:\\Users\\beqab\\MziuriHws\\src\\HW1222\\Student.txt");
         ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
         Student[] students = new Student[5];
-        int mx = 0; int mxIndex = -1;
+        int mx = 0; int mxIndex = 0;
         for(int i=0; i<students.length; i++){
             students[i] = (Student) objectInputStream.readObject();
             if(mx < students[i].getGrade()){
