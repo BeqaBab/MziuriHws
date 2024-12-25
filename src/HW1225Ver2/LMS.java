@@ -1,4 +1,4 @@
-package HW1225;
+package HW1225Ver2;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -16,9 +16,8 @@ public class LMS implements Serializable {
         boolean isHere = false;
         for(Object a:books){
             Book book = (Book) a;
-            if(book.name.equals(b.name) && book.author.equals(b.author) && book.id==b.id){
+            if(book.name.equals(b.name) && book.author.equals(b.author) && book.id==b.id && book.isAvailable){
                 isHere = true;
-                books.remove(book);
                 book.isAvailable = false;
                 break;
             }
