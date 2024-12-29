@@ -6,6 +6,7 @@ import java.util.ArrayList;
 public class LMS implements Serializable {
     ArrayList books = new ArrayList<Book>();
     final static long serialVersionUID = 1L;
+
     public void addBook(Book b) {
         b.isAvailable = true;
         books.add(books.size(), b);
