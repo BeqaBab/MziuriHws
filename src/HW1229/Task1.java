@@ -15,6 +15,13 @@ public class Task1 {
         System.out.println("The length of the arraylist is " + arrayList.size() + " and its elements are:");
         for(int i : arrayList){
             System.out.print(i + " ");
+        };
+        System.out.println("");
+        System.out.print("Even numbers are:");
+        for(int i : arrayList){
+            if(i % 2 == 0){
+                System.out.print(i + " ");
+            }
         }
     }
 }
