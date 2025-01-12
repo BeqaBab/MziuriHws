@@ -10,6 +10,7 @@ public class Main {
         System.out.println("2. Add a new contact");
         System.out.println("3. Delete an old contact");
         System.out.println("4. Change a contact with its name");
+        System.out.println("5. Find a contact");
         Data data = new Data();
         data.ReadContacts();
         Scanner scanner = new Scanner(System.in);
@@ -26,6 +27,9 @@ public class Main {
                 break;
             case 4:
                 data.ChangeContact();
+                break;
+            case 5:
+                data.FindContact();
                 break;
             default:
                 System.out.println("Please input a valid command.");

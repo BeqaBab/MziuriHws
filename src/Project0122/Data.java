@@ -39,13 +39,13 @@ public class Data {
         if(phoneContactArrayList.size() >= 30){
             System.out.println("Warning: This application was made for only 30 contacts.");
         }
-        System.out.println("Please input your new contacts first name, last name, phone number and email.");
+        System.out.println("Please input your new contact's first name, last name, phone number and email.");
         PhoneContact phoneContact = new PhoneContact(scanner.next(), scanner.next(), scanner.next(), scanner.next());
         phoneContactArrayList.add(phoneContact);
     }
 
     public void DeleteContact(){
-        System.out.println("Please input your new contacts first name, last name, phone number and email.");
+        System.out.println("Please input your new contact's first name, last name, phone number and email.");
         PhoneContact phoneContact = new PhoneContact(scanner.next(), scanner.next(), scanner.next(), scanner.next());
         boolean isHere = false;
         for(PhoneContact phoneContact1:phoneContactArrayList){
@@ -61,7 +61,7 @@ public class Data {
     }
 
     public void ChangeContact(){
-        System.out.println("Please input your new contacts first name, last name, phone number and email.");
+        System.out.println("Please input your new contact's first name, last name, phone number and email.");
         PhoneContact phoneContact = new PhoneContact(scanner.next(), scanner.next(), scanner.next(), scanner.next());
         boolean isHere = false;
         for(PhoneContact phoneContact1:phoneContactArrayList){
@@ -75,5 +75,19 @@ public class Data {
         if(!isHere){
             System.out.println("This contact couldn't be found.");
         }else System.out.println("The contact has been changed");
+    }
+
+    public void FindContact(){
+        System.out.println("Please input your contact's first name and last name.");
+        String firstName = scanner.next();  String lastName = scanner.next();
+        boolean isHere = false;
+        for(PhoneContact phoneContact1:phoneContactArrayList){
+            if(phoneContact1.firstName.equals(firstName) && phoneContact1.lastName.equals(lastName)){
+                isHere = true;
+                System.out.println(phoneContact1.firstName + " " + phoneContact1.lastName + " " + phoneContact1.phoneNumber + " " + phoneContact1.Email);
+                break;
+            }
+        }
+        if(!isHere) System.out.println("This contact couldn't be found.");
     }
 }
