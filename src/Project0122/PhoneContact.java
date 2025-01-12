@@ -7,6 +7,7 @@ public class PhoneContact implements Serializable {
     String lastName;
     String phoneNumber;
     String Email;
+    final static long serialVersionUID = 1L;
 
     public PhoneContact(String firstName, String lastName, String phoneNumber, String email) {
         this.firstName = firstName;
