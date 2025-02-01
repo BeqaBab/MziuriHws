@@ -1,4 +1,4 @@
-package HW0201;
+package HW0202;
 
 public class Product {  // public გავხადე
     public String name;    // n -> name

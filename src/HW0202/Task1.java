@@ -1,6 +1,4 @@
-package HW0201;
-
-import java.util.ArrayList;
+package HW0202;
 
 public class Task1 {
     public static void main(String[] args) {
