@@ -14,7 +14,7 @@ public class Corporation {
     public void creation() throws IncorrectIdException {
         name = "Corporation inc.";
         address = new Address("Georgia", "Kutaisi", "Nike", "5A");
-        for(int i = 0; i < 2; i++){
+        for(int i = 0; i < 5; i++){
             System.out.println("Please input first and last name, salary and ID:");
             Employee employee = new Employee(scanner.next(), scanner.next(), scanner.nextInt());
             String s = scanner.next();
