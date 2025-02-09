@@ -31,6 +31,7 @@ class LinkedList{
             if(current.data == data)    return true;
             current = current.next;
         }
+        if(current.data == data)    return true;
         return false;
     }
 }
