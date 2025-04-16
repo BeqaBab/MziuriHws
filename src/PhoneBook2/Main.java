@@ -1,11 +1,12 @@
-package HW0416;
+package PhoneBook2;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        String url = "jdbc:postgresql://localhost:5432/LibraryManagementSystem";
+        String url = "jdbc:postgresql://localhost:5432/PhoneBook";
         String user = "postgres";
         String password = ReaderInitiate.Initiate();
         try{
@@ -14,26 +15,29 @@ public class Main {
             System.out.println("connected to database");
 
             System.out.println("Please choose a command:");
-            System.out.println("1. Read from books");
-            System.out.println("2. Add new information into books");
-            System.out.println("3. Delete information from books");
-            System.out.println("4. Edit information in books");
+            System.out.println("1. Search in contacts");
+            System.out.println("2. Add a new contact");
+            System.out.println("3. Delete a contact");
+            System.out.println("4. Edit a contact");
+            System.out.println("5. See all contacts");
 
             String command = scanner.next();
 
             switch (command){
                 case "1":
-                    ReadInformation.Read(connection);
+                    SearchContact.search(connection);
                     break;
                 case "2":
-                    AddInformation.add(connection);
+                    AddContact.add(connection);
                     break;
                 case "3":
-                    DeleteInformation.delete(connection);
+                    DeleteContact.delete(connection);
                     break;
                 case "4":
-                    EditInformation.edit(connection);
+                    EditContact.edit(connection);
                     break;
+                case "5":
+                    SeeAll.see(connection);
                 default:
                     System.out.println("Please input a valid command.");
                     break;
