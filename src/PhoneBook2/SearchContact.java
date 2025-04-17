@@ -23,10 +23,10 @@ public class SearchContact {
                 String contact_last_name = rs.getString("contact_last_name");
                 String contact_number = rs.getString("contact_number");
 
-                System.out.println(id);
-                System.out.println(contact_first_name);
-                System.out.println(contact_last_name);
-                System.out.println(contact_number);
+                System.out.println("contact_id: " + id);
+                System.out.println("contact_first_name: " + contact_first_name);
+                System.out.println("contact_last_name: " + contact_last_name);
+                System.out.println("contact_number: " + contact_number);
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);

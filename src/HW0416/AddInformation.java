@@ -12,13 +12,27 @@ public class AddInformation {
             Scanner scanner = new Scanner(System.in);
             String selectQuery = "INSERT INTO books(title, author_id, published_year, genre, publisher_id, category_id) VALUES(?, ?, ?, ?, ?, ?);";
             PreparedStatement stmt = connection.prepareStatement(selectQuery);
-            stmt.setString(1, scanner.nextLine());
-            stmt.setInt(2, scanner.nextInt());
-            stmt.setInt(3, scanner.nextInt());
-            stmt.setString(4, scanner.nextLine());
-            stmt.setInt(5, scanner.nextInt());
-            stmt.setInt(6, scanner.nextInt());
-            stmt.executeUpdate();
+
+            String title = scanner.nextLine();
+            int author_id = scanner.nextInt();
+            int published_year = scanner.nextInt();
+            String genre = scanner.next();
+            int publisher_id = scanner.nextInt();
+            int category_id = scanner.nextInt();
+
+            stmt.setString(1, title);
+            stmt.setInt(2, author_id);
+            stmt.setInt(3, published_year);
+            stmt.setString(4, genre);
+            stmt.setInt(5, publisher_id);
+            stmt.setInt(6, category_id);
+
+            int rowsAffected = stmt.executeUpdate();
+            if (rowsAffected > 0) {
+                System.out.println("Book added successfully!");
+            } else {
+                System.out.println("Book couldn't be added.");
+            }
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
