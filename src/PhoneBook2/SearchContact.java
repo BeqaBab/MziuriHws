@@ -9,10 +9,10 @@ import java.util.Scanner;
 public class SearchContact {
     public static void search(Connection connection){
         try{
-            System.out.println("Please input book_id:");
+            System.out.println("Please input contact_id:");
             Scanner scanner = new Scanner(System.in);
             int contact_id = scanner.nextInt();
-            String searchQuery = "SELECT * FROM books WHERE book_id = ?;";
+            String searchQuery = "SELECT * FROM contacts WHERE contact_id = ?;";
             PreparedStatement stmt = connection.prepareStatement(searchQuery);
             stmt.setInt(1, contact_id);
             ResultSet rs = stmt.executeQuery();
